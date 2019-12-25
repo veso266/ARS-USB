@@ -1,0 +1,176 @@
+v2.3g    20/August/2016
+===================================
+ - Fixed problem for starting elevation tracking (only elevation) just if it's at the limit position (180º). Tnx W7QL. 
+
+v2.3f    3/Dic/2015
+===================================
+ - Fixed in absolute mode errors type: "ERROR 1"
+
+v2.3e    1/July/2015
+===================================
+ - Fixed elevation appointment with slow motion rotors (tnx EA5CJ)
+
+v2.3d    21/April/2015
+===================================
+ - Added elevation offsets
+
+v2.3c    19/April/2015
+===================================
+ - Added "CE" command suggested by Art K0AIZ. Overlap Flag is added to the Az. Position
+	Syntax: CE<enter>
+	Return: +xYYY	
+		x=Overlap Flag. 0: No overlap, 1: Overlap activated.
+		YYY=Azimuth position
+
+v2.3b    1/Feb/2015
+===================================
+ - Added Serial Number to the serial port. In this way we can associate a Serial number to a COM Port under Linux
+ 
+v2.3a    6/Janu/2015
+===================================
+ - Change the VID/PID to Microchip VID/PÎD in this way, the Microchip signed Driver can be used without Pb under Windows 7/8
+
+v2.1m    27/Oct/2015
+===================================
+ - Bug reported by ON5MF when used Overlap and appointing between 270º to 260º.
+
+v2.1k    26/Dic/2013
+===================================
+ - Checked a change at Vid/Pid 
+
+v2.1i    10/Dic/2013
+===================================
+ - Fixed a bug reported by oe3mzc on Elev tracking > 45º
+
+v2.1h    22/Sept/2013
+===================================
+ - K1IED suggest to increase the angle for Speed control change (DELTAAZ=20º)
+
+v2.1g    29/Jul/2013
+===================================
+ - Added GS232B API
+ - Fixed a buf in the Elev appointing
+
+v2.1e    27/Mar2013
+===================================
+ - Added Password access. Used for remote control via Raspberry or similar ways
+
+v2.1d    24/Feb/2013
+===================================
+ - Implemented the detection of movement in oposite direction
+
+v2.1c    13/Dic/2012
+===================================
+ - New CCS compiler
+
+v2.1b    14/Oct/2012
+===================================
+ - K5GO/N5DX request an special release for a T2X. Stating in oposite direction to release the brake
+
+V2.1a	3/Sept/2012
+===================================
+ - Fixed bug; reported by W0DHB when send FAA comand for 450º.
+ - ARSVCOM V5 release + ARSConf
+ - New Driver .INF for both 32/64 bits
+
+v1.3h   15/April/2012
+===================================
+ - Internal change: New Flag PWM 
+ - Internal change: New Flag JAM Detection
+ - Internal change: New options for AUx relay
+ - Internal change: New command -> FI
+ - Internal change: WatchDog event visible on LCD
+ - Configuration parameters removed from CLI (command Line Interface)
+ 
+v1.3g   2/April/2012
+===================================
+ - internal change: An Az+El can be used as Az only, via Flag: 1F
+ - Internal change: FI (124 -> 128). Ready for new ARSCOnf.
+ - FAA allowed to work from 450 -> 500 (PST Support)
+
+v1.3f   6/Jan/2012
+===================================
+ - Optimizated Display_LCD() function
+ - Fixed FBxx command
+
+v1.3e   28/Dec/2011
+===================================
+ - Move EEINVADC Register from Pos 30->31
+ - Changed output format (FI command)
+ - Aux relay can operate as Speed control
+
+v1.3d   18/Dec/2011
+===================================
+ - Fixed Bootloader bug
+ - Fixed Vid & Pid (was released incorrectly)
+ - Code Optimization
+
+v1.3c    6/Dec/2011
+===================================
+ - new commands: FI and FO
+
+
+v1.3b	11/Nov/2011
+===================================
+ - Fixed a LCD problem
+
+v1.3a	28/Oct/2011
+===================================
+ - New VId & PId assigned by Microchip:
+	VID: 0x04D8
+	PID: 0xF8E7
+ - LCD blink on during Calibration in Absolute Mode
+
+v1.2p	17/Sep/2011
+==============================
+ - Azimuth scroll bar fixed when ADC< CCW Limit
+ - TODO: Default Az. Preset value = startup position
+
+v1.2o	11/Sept/2011
+====================
+ - Optimization on appointing on overlap positions
+ - LCD -> #Preset# or #RUN# displayed
+
+v1.2n	27/March/2011
+=====================
+ - Overlap mode is supported
+
+
+V1.2m	5/February/2011
+=======================
+ - Code optimation on RTC module
+ - Green Led: fixed flip/flop
+ - fixed a LCD position display after STOP rotators
+
+
+V1.2l	4/February/2011
+=======================
+ - Fixed problem with AZ/El Watch parameter
+ - Bootloader was changed; Data coruption was fixed.
+
+V1.2k	22/January/2011
+=======================
+ - Added a Brake delay (1/10 sec)
+   FB command,  examples:
+	FB 50 = 5000 ms delay
+	FB 3  = 300 ms delay
+		
+
+V1.2j	09/January/2011
+=======================
+ - 5 seconds delay for CCW/CW - EC4CBZ
+ - Up/Dwn buttons exchange their positions
+
+V1.2i	07/January/2011
+=======================
+
+ - Added new command "Nxxx" added for Elevation tracking.
+ - Added FAT/FET -> Retray parameter
+	This parameter helps the machine state to adjust the Max. number of retrays during the appointing routine.
+	Example: FAT5 means in Azimuth will use 5 changes of direction as Maximun during the appointing
+ - Added the Firmware Banner release during the PIC boot
+
+
+V1.2h	05/January/2011
+=======================
+First version released

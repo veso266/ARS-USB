@@ -1,0 +1,41 @@
+Mando con un ARS-USB 
+====================
+
+Por medio del ARS-USB y con pocos componentes más, se puede realizar un mando de motor.
+
+Debes de distinguir 2 posibles tipos de mandos, dependiendo del tipo de tensión que use el motor:
+
+A.- Corriente Alterna
+---------------------
+Son como funcionan la mayoría de motores, ejemplo G250, G450, G650, HAMiV, T2X
+Estos motores necesitan 3 hilos y un condensador (C) para su arranque. Algunos motores llevan el C
+montado en el mando, en cuyo caso al reemplazar el mando original, habrá que conseguir uno para que sea
+usado con el ARS-USB.
+Por otro lado, la mayor parte de motores, suelen emplear una alimentación de 24Vca.
+
+Luego en resumen, los motores de alterna necesitan añadir al ARS-USB:
+	- Condensador de unos 100uF (micro Faradios) conectados entre 2 de los 3 hilos que van al motor electrico
+	- Fuente o transformador que entregue 24Vca
+
+B.- Corriente Continua
+----------------------
+Ejemplo de este tipo de motor, lo tenemos en los Prosistel Serie "D" o G800/G1000.
+En este caso, ya no es necesario el Condensador "C", y solo se emplean 2 hilos que van al motor.
+Al aplicar "V" (V depende del tipo de motor) gira en un sentido y al invertir V, en el contrario.
+Por lo general al igual que los motores de alterna, suelen ser de 24Vcc, aunque hay motores tipo Prosistel
+que usan 12Vcc
+
+
+
+Para finalizar, la posición se obtiene por el POTenciometro (POT) que tiene la unidad externa y que al hacer
+girar el motor, va variando su resistencia.
+
+Si uno de las patas del POT la ponemos a tierra y la otra a 5Vcc (podría usarse también 12Vcc) al hacer 
+girar el motor de un tope (Izquierda) al otro (Derecho) obtendremos en el cursor del POT una tensión entre
+0V para el primer tope, a los 5Vcc en el tope de derechas.
+
+En el ARS-USB podemos obtener los 5Vcc en la patilla derecha del regulador 7805 (IC5) que está junto a J3.
+La masa la tenemos disponible en la patilla 3 (central) de la entrada J4. Recuerda conectar J4-3 con J4-4 
+quitar la masa flotante. La tensión de retorno del POT o cursor, se conecta a J4-5
+
+
