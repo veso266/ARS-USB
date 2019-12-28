@@ -1,0 +1,5 @@
+Mxxx -- turn rotator Azimuth (example to turn to 90°: M090)
+Nyyy --- turn rotator Elevation
+Wxxx yyy --- azimuth + elevetion
+C -- Return Azimuth Angle
+C2 -- Return Azimuth and Elevation Angle
