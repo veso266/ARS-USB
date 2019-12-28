@@ -1,3 +1,5 @@
+First command that Client sends: 0
+
 Mxxx -- turn rotator Azimuth (example to turn to 90°: M090)
 Nyyy --- turn rotator Elevation
 Wxxx yyy --- azimuth + elevetion
